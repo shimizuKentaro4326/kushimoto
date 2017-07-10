@@ -1,0 +1,61 @@
+ <script language="JavaScript" type="text/javascript">
+ <!--
+   function modify_demand($value){
+        document.form1.steak.value = form.lunch.value;
+        document.form1.submit();
+     }
+  //-->
+ </script>
+<input type="hidden" id="household_id_orig" name="household_id_orig"/>
+<input type="hidden" id="people_id" name="people_id"/>
+かな	: <input type="text" id="last_name_rubi" name="last_name_rubi" size="20"/><input type="text"  id="first_name_rubi" name="first_name_rubi" size="20"/><br/> 
+名前	: <input type="text" id="last_name" name="last_name" size="20"/><input type="text"  id="first_name" name="first_name" size="20"/><br/> 
+性別	: <input type="radio"  id="sex1" name="sex" value="男" "checked"/>男
+<input type="radio"  id="sex2" name="sex" value="女"/>女<br/>
+世帯	: <input type="radio"  id="is_householder_true" name="is_householder" value="1" "checked"/>世帯主
+<input type="radio" id="is_householder_false" name="is_householder" value="0" />非世帯主<br/>
+住所  : <select id="postal_code" name="postal_code">
+</select>
+番地: <input type="text"  id="street" name="street" size="20"> <br>
+<div id="householder" >世帯主を選んでください:<select id="household_id_ref" name="household_id_ref" style="width:150px;"></select></div>
+電話	: <input type="text" id="tel" name="tel" size="20"></br>
+携帯	: <input type="text" id="celphone" name="celphone" size="20"></br>
+mail	: <input type="text" id="email" name="email" size="40"><br>
+誕生日  : 西暦<input type="text" id="birthyear" name="birthyear" size="4">年
+<input type="text" id="birthmonth" name="birthmonth" size="2">月
+<input type="text" id="birthday" name="birthday" size="2">日<br>
+政党    :<select id="party_id" name="party_id">
+</select></br>
+死亡日  : <input type="text" id="deadday" name="deadday" size="10"><br>
+<br>
+メモ    : <textarea id="memo" name="memo" cols="50" rows="6"></textarea><br>
+要望    : <table id="demand" name="demand" >
+	<thead>
+		<tr>
+			<th name="acceptance_date">登録日付</th>
+			<th name="state">状態</th>
+			<th name="type">種類</th>
+			<th name="title">タイトル</th>
+			<th name="contents">内容</th>
+			<th name="correspondence_date">対応日付</th>
+			<th name="correspondence_contents">対応内容</th>
+			<th name="modify">編集</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>
+				<input type="submit" form="demand_modify" value="編集">
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<form id="demand_modify" action="/kushimoto/php/demand_form.php"></form>

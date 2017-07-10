@@ -1,0 +1,23 @@
+table{
+  border-collapse:collapse;
+  border-color:red;
+}
+table tr:nth-child(even) {
+    background: #DDDED3;
+}
+thead {
+	background:#74A9D6;
+	text-align:left;
+}
+table tr:nth-child(n+1):hover{
+	background:#F2CAAA;
+}
+table tr th td {
+  border:1px #000000 solid;
+}
+td{
+  padding-right:10px;
+}
+th{
+  padding-right:10px;
+}
